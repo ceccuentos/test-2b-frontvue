@@ -41,6 +41,7 @@
 <script>
 import TableItem from './table-view-item.vue'
 import  axios from 'axios';
+import { auth } from "@/firebase";
 
 export default {
   name: 'TableView',  
@@ -59,15 +60,16 @@ export default {
         this.getItem();
       }
     },
-    getItem: function () {
-        //axios.get('https://randomuser.me/api/')
-        axios.get('http://localhost:3000/getnames')        
+    getItem: async function () {
+        const token = await auth.currentUser.getIdToken();
+        axios.get('http://localhost:3001/api/getnames', {headers:  { authorization: `${token}` }})    
         .then(response => {
             response.data.results[0].opened = false;
             this.itemsList.push(response.data.results[0]);
         })
         .catch( e => {
-            this.errors.push(e);
+            console.log('servicio no disponible')
+            //this.errors.push(e);
         })
     },
     openSelectedItem: function(id) {
