@@ -5,27 +5,27 @@
           <div class="table-column"></div>
           <div class="table-column">
             <div class='d-flex h-100 w-100'>
-              Last
+              Apellido
             </div>
           </div>
           <div class="table-column">
             <div class='d-flex h-100 w-100'>
-              First
+              Nombre
             </div>
           </div>
           <div class="table-column">
             <div class='d-flex h-100 w-100'>
-              Username
+              Usuario
             </div>
           </div>
           <div class="table-column">
             <div class='d-flex h-100 w-100'>
-              Phone
+              Teléfono
             </div>
           </div>
           <div class="table-column">
             <div class='d-flex h-100 w-100'>
-              Location
+              Ubicación
             </div>
           </div>
           <div class="table-column"></div>

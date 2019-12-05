@@ -47,24 +47,24 @@
             <div class="d-flex">
                 <div class="more-info-text">
                     <div>
-                        <div><span class='bold mr-2'>Username</span><span>{{userInfo.login.username}}</span></div>
-                        <div><span class='bold mr-2'>Registered</span><span>{{registerDate}}</span></div>
+                        <div><span class='bold mr-2'>Usuario</span><span>{{userInfo.login.username}}</span></div>
+                        <div><span class='bold mr-2'>Registro</span><span>{{registerDate}}</span></div>
                         <div><span class='bold mr-2'>Email</span><span>{{userInfo.email}}</span></div>
                     </div>
                     <div>
-                        <div><span class='bold mr-2'>Address</span><span>{{userInfo.location.street}}</span></div>
-                        <div><span class='bold mr-2'>City</span><span>{{userInfo.location.city}}</span></div>
-                        <div><span class='bold mr-2'>Zip Code</span><span>{{userInfo.location.postcode}}</span></div>
+                        <div><span class='bold mr-2'>Dirección</span><span>{{userInfo.location.street}}</span></div>
+                        <div><span class='bold mr-2'>Ciudad</span><span>{{userInfo.location.city}}</span></div>
+                        <div><span class='bold mr-2'>Cod. Postal</span><span>{{userInfo.location.postcode}}</span></div>
                     </div>
                     <div>
-                        <div><span class='bold mr-2'>Birthday</span><span>{{birthdayDate}}</span></div>
-                        <div><span class='bold mr-2'>Phone</span><span>{{userInfo.phone}}</span></div>
-                        <div><span class='bold mr-2'>Cell</span><span>{{userInfo.cell}}</span></div>
+                        <div><span class='bold mr-2'>Fec. Nac</span><span>{{birthdayDate}}</span></div>
+                        <div><span class='bold mr-2'>Teléfono</span><span>{{userInfo.phone}}</span></div>
+                        <div><span class='bold mr-2'>Celular</span><span>{{userInfo.cell}}</span></div>
                     </div>
                 </div>
-                <div class="more-info-photo image-bordered">
+                <!-- <div class="more-info-photo image-bordered">
                     <img :src="userInfo.picture.large" :alt="userInfo.name.first">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
