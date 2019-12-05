@@ -22,14 +22,6 @@ Vue.config.productionTip = false
 auth.onAuthStateChanged(function(user) {
   if (user) {
       // User is signed in.
-      // var name = user.displayName;
-      // var email = user.email;
-      // var emailVerified = user.emailVerified;
-      // var photoUrl = user.photoURL;
-      // var isAnonymous = user.isAnonymous;
-      // var uid = user.uid;
-      // var providerData = user.providerData;
-
       store.dispatch('setUser', user)
       console.log(user.displayName)
   }

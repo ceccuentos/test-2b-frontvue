@@ -62,7 +62,8 @@ export default {
     },
     getItem: async function () {
         const token = await auth.currentUser.getIdToken();
-        axios.get('http://localhost:3001/api/getnames', {headers:  { authorization: `${token}` }})    
+        const urlNames = 'https://test-2b-back.herokuapp.com/api/getnames' //'http://localhost:3001/api/getnames'
+        axios.get(urlNames, {headers:  { authorization: `${token}` }})    
         .then(response => {
             response.data.results[0].opened = false;
             this.itemsList.push(response.data.results[0]);
