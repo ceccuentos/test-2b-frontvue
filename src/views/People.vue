@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h2>Colaboradores 2Brains</h2>
     <TableView></TableView>
   </div>
 </template>
@@ -27,7 +28,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 5px;
 }
 .d-flex {
   display: flex;

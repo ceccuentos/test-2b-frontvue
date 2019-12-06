@@ -1,7 +1,7 @@
 <template>
   <v-app >
    <Navbar v-if="usuario !='' "></Navbar>
-    <v-content class="mx-4 mb">
+    <v-content class="mx-4 mb" >
       <v-container>
         <router-view/>
       </v-container>

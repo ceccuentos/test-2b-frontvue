@@ -5,12 +5,12 @@
           <div class="table-column"></div>
           <div class="table-column">
             <div class='d-flex h-100 w-100'>
-              Apellido
+              Nombre
             </div>
           </div>
           <div class="table-column">
             <div class='d-flex h-100 w-100'>
-              Nombre
+              Apellido
             </div>
           </div>
           <div class="table-column">
@@ -51,25 +51,32 @@ export default {
   data: function () {
     return {
       itemsList: [],
-      count: 10,
+      count: 4,
     }
   },
   methods: {
     getItemsList: function () {
-      for( let i = 1; i <= this.count; i++) {
         this.getItem();
-      }
     },
     getItem: async function () {
         const token = await auth.currentUser.getIdToken();
-        const urlNames = 'https://test-2b-back.herokuapp.com/api/getnames' //'http://localhost:3001/api/getnames'
+        const urlNames = 'https://test-2b-back.herokuapp.com/api/getnames' 
+        //const urlNames = 'http://localhost:3001/api/getnames'
         axios.get(urlNames, {headers:  { authorization: `${token}` }})    
         .then(response => {
-            response.data.results[0].opened = false;
-            this.itemsList.push(response.data.results[0]);
+          for( let i = 0; i <= this.count-1; i++) {
+            response.data.results[i].opened = false;
+            this.itemsList.push(response.data.results[i])
+          }
         })
         .catch( e => {
-            console.log('servicio no disponible')
+            if (!e) {console.log('Error no determinado')}
+            else if (e.response.status = 503)
+            {
+              console.log('servicio no disponible')
+              // reintenta
+              this.getItem();
+            } 
             //this.errors.push(e);
         })
     },

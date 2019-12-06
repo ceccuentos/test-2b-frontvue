@@ -8,12 +8,12 @@
             </div>
             <div class="table-column">
                 <div class='d-flex h-100 w-100'>
-                    {{userInfo.name.last}}
+                    {{userInfo.name.first}}
                 </div>
             </div>
             <div class="table-column">
                 <div class='d-flex h-100 w-100'>
-                    {{userInfo.name.first}}
+                    {{userInfo.name.last}}
                 </div>
             </div>
             <div class="table-column">
