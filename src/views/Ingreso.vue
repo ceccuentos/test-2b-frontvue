@@ -37,7 +37,7 @@ export default {
     methods: {
         async google(){
             const provider = new firebase.auth.GoogleAuthProvider();
-            console.log('google');
+            //console.log('google');
             this.ingreso(provider);
        },
        async ingreso(provider){
@@ -47,7 +47,7 @@ export default {
         try {
           const result = await firebase.auth().signInWithPopup(provider)
           const user = result.user;
-          console.log(user)
+          //console.log(user)
           // Construir usuario
 
           //this.setUser(user)

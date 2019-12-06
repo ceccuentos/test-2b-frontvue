@@ -23,7 +23,7 @@ auth.onAuthStateChanged(function(user) {
   if (user) {
       // User is signed in.
       store.dispatch('setUser', user)
-      console.log(user.displayName)
+      //console.log(user.displayName)
   }
   // No user is signed in.
   new Vue({
